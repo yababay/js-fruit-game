@@ -23,6 +23,7 @@ IntroPromise
     .then(fruit => new Game(fruit).play())
     .then(() => {
         result.querySelector('.gamers-scores').textContent = scores.textContent
+        result.querySelector('button').addEventListener('click', () => location.reload())
         game.classList.add('hidden')
     })
     .catch(ex => console.log(ex))
