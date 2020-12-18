@@ -1,0 +1,53 @@
+:root {
+    --body-background-color : #fff;
+
+    --section-scale-factor  : 1.4;
+    --section-margin-top    : 8px;
+    --section-margin-bottom : 8px;
+
+    --section-height        : calc(100vh - var(--section-margin-top) - var(--section-margin-bottom));
+    --section-width                : calc(var(--section-height) * var(--section-scale-factor));
+
+    --section-modules-count        : 12;
+    --section-module-height        : calc(var(--section-height) / var(--section-modules-count));
+
+    --section-main-height          : calc(var(--section-module-height) * (var(--section-modules-count) - 2));
+    --section-header-footer-height : calc(var(--section-module-height) * .9);
+}
+
+html, body, section header, section main, section footer {
+    margin  : 0;
+    padding : 0;
+    width   : 100%;
+    font-family: Arial, Helvetica, Verdana, "Trebuchet MS", sans-serif;
+    font-size: 16px;
+}
+
+html, body, article {
+    background-color: var(--body-background-color);
+}
+
+section {
+    height  : var(--section-height);
+    width   : var(--section-width);
+    margin  : var(--section-margin-top) auto var(--section-margin-bottom) auto;
+    padding : 0;
+    display : flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+section main {
+    height: var(--section-main-height);
+    width: 100%;
+}
+
+section header, section footer {
+    height  : var(--section-header-footer-height);
+    line-height  : var(--section-header-footer-height);
+}
+
+.hidden {
+    display: none;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <script src="js/index.js" type="module" defer></script>
+    <title>Игра &laquo;Фруктоловка&raquo;</title>
+</head>
+<body>
+    <section>
+        <header><h1>Игра &laquo;Фруктоловка&raquo;</h1></header>
+        <main>
+            <article id="intro">
+                <p>Цель игры - кликать по падающим фруктам. Если изображение "пойманного" фрукта
+                    совпадает с тем, что показано над игровым полем, игроку начисляются баллы. 
+                    Их количество зависит от скорости движения объекта. Если игрок кликает на фрукт ошибочно 
+                    (не на тот, который показан на картинке сверху) - списывается 5 баллов.
+                </p>
+                <p>Перед началом игры необходимо ввести имя игрока в нижеследующую форму.</p>
+                <form>
+                    <p>Введите имя игрока: <input> <button type="submit">OK</button></p>
+                </form>
+            </article>
+            <article id="game">
+                <nav>
+                    <p>
+                        <strong>Игрок:&nbsp;</strong>
+                        <span class="gamers-name"></span>
+                    </p>
+                    <p class="what-to-catch">
+                        <strong>Что ловим:&nbsp;</strong>
+                        <img src="img/stub.png">
+                    </p>
+                    <p>
+                        <strong>Баллы:&nbsp;</strong>    
+                        <span  class="gamers-scores">0</span>
+                    </p>
+                    <p>
+                        <strong>Время:&nbsp;</strong>    
+                        <span  class="gamers-time">0</span>
+                        <button>Пауза</button>
+                    </p>
+                </nav>
+                <figure>
+                    <canvas></canvas>
+                </figure>
+            </article>
+            <article id="result">
+                <p>
+                    Результат игрока <span  class="gamers-name"></span> &dash; <span  class="gamers-scores"></span> баллов.
+                    Чтобы начать новую игру, перезагрузите страницу.
+                </p>
+                <p><a href="/"><strong>Играть снова</strong></p>
+            </article>
+        </main>
+        <footer></footer>
+    </section>
+</body>
+</html>

@@ -1,0 +1,28 @@
+section main {
+    position: relative;
+}
+
+section main article {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section main article:nth-child(1) {
+    z-index: 3;
+}
+
+section main article:nth-child(2) {
+    z-index: 2;
+}
+
+section main article:nth-child(3) {
+    z-index: 1;
+}
+
+section main p {
+    max-width: 800px;
+}
